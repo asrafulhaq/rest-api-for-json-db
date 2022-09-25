@@ -1,4 +1,5 @@
 const express = require('express');
+const { getTeachers, createTeacher } = require('../controllers/teacherController');
 
 
 
@@ -6,7 +7,8 @@ const express = require('express');
 const router = express.Router();
 
 
-
+// routes 
+router.route('/').get(getTeachers).post(createTeacher);
 
 
 
